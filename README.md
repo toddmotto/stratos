@@ -1,6 +1,8 @@
 # Stratos.js [![Build Status](https://travis-ci.org/toddmotto/stratos.png)](https://travis-ci.org/toddmotto/stratos)
 
-Stratos is a 1KB standalone module that simplifies Object manipulation. Stratos provides a range of methods that help developers manipulate JavaScript Objects with ease and very quickly, from extending objects to adding properties, removing or destroying them. The methods keep code readable and take care of the underlying looping, checking and assigning logic.
+Stratos is a 1KB standalone module that simplifies Object manipulation. Stratos provides a range of methods that help developers manipulate JavaScript Objects with ease and very quickly, from extending objects to adding properties, removing or destroying them. The methods keep code readable and take care of the underlying looping, checking and assigning logic. Also includes JSON methods for stringify and parse.
+
+Supports IE6+, but `toJSON` and `fromJSON` are IE8+ as native JSON parsing doesn't exist in IE6/7.
 
 ## Methods
 
@@ -74,6 +76,23 @@ var obj = { name: 'Todd', location: 'UK' };
 Stratos.vals(obj); // ['Todd', 'UK']
 ```
 
+#### toJSON()
+Converts an Object to JSON.
+
+```javascript
+var obj = { name: 'Todd', location: 'UK' };
+Stratos.toJSON(obj); // {"name":"Todd","location":"UK"}
+```
+
+#### fromJSON()
+Parses JSON back to an Object.
+
+```javascript
+var obj = { name: 'Todd', location: 'UK' };
+var json = Stratos.toJSON(obj); // {"name":"Todd","location":"UK"}
+Stratos.fromJSON(json); // { name: 'Todd', location: 'UK' };
+```
+
 ## Installing with Bower
 Use the repository hook:
 
@@ -99,5 +118,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release history
 
+- 1.1.0
+  - Add toJSON and fromJSON for stringify/parse methods
 - 1.0.0
   - Initial release

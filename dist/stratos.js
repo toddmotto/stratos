@@ -67,6 +67,13 @@
     return vals;
   };
 
+  exports.toJSON = function (object) {
+    return JSON.stringify(object);
+  };
+
+  exports.fromJSON = function (object) {
+    return JSON.parse(object);
+  };
 
   return exports;
 

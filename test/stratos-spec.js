@@ -146,4 +146,28 @@ describe('Stratos', function () {
 
   });
 
+  /**
+   * toJSON()
+   */
+  describe('toJSON(), fromJSON()', function () {
+
+    var obj = { prop1: 'hello', prop2: { prop3: true } };
+    var json;
+    var parsed;
+
+    beforeEach(function () {
+      json = Stratos.toJSON(obj);
+      parsed = Stratos.fromJSON(json);
+    });
+
+    it('should stringify the object', function () {
+      expect(Object.prototype.toString.call(json)).toBe('[object String]');
+    });
+
+    it('should parse the string back to an object', function () {
+      expect(Object.prototype.toString.call(parsed)).toBe('[object Object]');
+    });
+
+  });
+
 });
