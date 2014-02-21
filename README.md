@@ -1,6 +1,6 @@
 # Stratos.js [![Build Status](https://travis-ci.org/toddmotto/stratos.png)](https://travis-ci.org/toddmotto/stratos)
 
-Stratos is a 1KB standalone Object manipulation module that provides a range of methods that help developers manipulate JavaScript Objects with ease quickly. The methods keep code readable and take care of the underlying looping, checking and assigning logic.
+Stratos is a 1KB standalone module that simplifies Object manipulation. Stratos provides a range of methods that help developers manipulate JavaScript Objects with ease and very quickly, from extending objects to adding properties, removing or destroying them. The methods keep code readable and take care of the underlying looping, checking and assigning logic.
 
 ## Methods
 
