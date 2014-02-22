@@ -11,7 +11,7 @@ Returns a boolean on whether an Object property exists.
 
 ```javascript
 var obj = { name: 'Todd' };
-Stratos.has(obj, name); // true
+Stratos.has(obj, 'name'); // true
 ```
 
 #### type()
