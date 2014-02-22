@@ -30,7 +30,7 @@ Adds an Object property with corresponding value. Value can be any Object type (
 ```javascript
 var obj = {};
 Stratos.add(obj, 'name', 'Todd'); // { name: 'Todd' }
-Stratos.add(obj, 'likes', ['Ellie Goulding', 'The Killers']); // { name: 'Todd', likes: ['Ellie Goulding'] }
+Stratos.add(obj, 'likes', ['Ellie Goulding', 'The Killers']); // { name: 'Todd', likes: ['Ellie Goulding', 'The Killers'] }
 ```
 
 #### remove()
