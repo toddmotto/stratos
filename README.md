@@ -69,7 +69,7 @@ Stratos.keys(obj); // ['name', 'location']
 ```
 
 #### vals()
-Traverses the Object and returns an array of the Object's own enumerable properties, in the same order as that provided by a `for in` loop.
+Traverses the Object and returns an array of the Object's own enumerable property values, in the same order as that provided by a `for in` loop.
 
 ```javascript
 var obj = { name: 'Todd', location: 'UK' };
