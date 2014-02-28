@@ -33,7 +33,7 @@
   exports.extend = function() {
     var process = function(destination, source) { 
       for (var key in source) {
-        if (hasOwnProperty.call(source, key)) {
+        if (exports.has(source, key)) {
           destination[key] = source[key];
         }
       }
