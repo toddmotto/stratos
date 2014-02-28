@@ -85,6 +85,34 @@ describe('Stratos', function () {
   });
 
   /**
+   * extend()
+   */
+  describe('extend() from multiple objects', function () {
+
+    var parent = { prop1: 'A', prop2: '1', prop3: 'a' };
+    var childA = { prop1: 'B', prop2: '2', prop4: 'new' };
+    var childB = { prop1: 'C', prop2: '3', prop5: 'property' };
+    var childC = { prop1: 'D', prop2: '4', prop6: 'created' };
+
+    beforeEach(function () {
+      Stratos.extend(parent, childA, childB, childC);
+    });
+
+    it('should overwrite existing (parent) properties', function () {
+      expect(parent.prop1).toBe('D');
+      expect(parent.prop2).toBe('4');
+    });
+
+    it('should leave existing props intact and add props that aren\'t there', function () {
+      expect(parent.prop3).toBe('a');
+      expect(parent.prop4).toBe('new');
+      expect(parent.prop5).toBe('property');
+      expect(parent.prop6).toBe('created');
+    });
+
+  });
+
+  /**
    * keys()
    */
   describe('keys()', function () {

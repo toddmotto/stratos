@@ -30,12 +30,20 @@
     }
   };
 
-  exports.extend = function (parent, child) {
-    for (var key in child) {
-      if (exports.has(child, key)) {
-        parent[key] = child[key];
+  exports.extend = function() {
+    var process = function(destination, source) { 
+      for (var key in source) {
+        if (hasOwnProperty.call(source, key)) {
+          destination[key] = source[key];
+        }
       }
+      return destination;
+    };
+    var result = arguments[0];
+    for(var i=1; i<arguments.length; i++) {
+      result = process(result, arguments[i]);
     }
+    return result;
   };
 
   exports.destroy = function (object) {
