@@ -49,9 +49,7 @@
 
   exports.destroy = function (object) {
     for (var key in object) {
-      if (exports.has(object, key)) {
-        exports.remove(object, key);
-      }
+      exports.remove(object, key);
     }
   };
 
