@@ -30,17 +30,17 @@
     }
   };
 
-  exports.extend = function() {
-    var process = function(destination, source) { 
+  exports.extend = function () {
+    var process = function (target, source) {
       for (var key in source) {
         if (exports.has(source, key)) {
-          destination[key] = source[key];
+          target[key] = source[key];
         }
       }
-      return destination;
+      return target;
     };
     var result = arguments[0];
-    for(var i=1; i<arguments.length; i++) {
+    for (var i = 1; i < arguments.length; i++) {
       result = process(result, arguments[i]);
     }
     return result;

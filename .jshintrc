@@ -17,7 +17,7 @@
   "unused": false,
   "trailing": false,
   "globals" : {
-    "Vault": true,
+    "Stratos": true,
     "define": true
   }
 }

@@ -42,14 +42,15 @@ Stratos.remove(obj, 'name'); // { location: 'UK' }
 ```
 
 #### extend()
-Merges two objects for top level keys. Stratos doesn't offer a deep merge of Objects on a recursive basis.
+Merges two objects recursively. Uses the `arguments` Object to extend as many objects as needed.
 
 ```javascript
-var parent = { prop1: 'hello', prop2: 'yes', prop3: 'sing' };
-var child = { prop1: 'goodbye', prop2: 'no', prop4: 'song' };
+var obj1 = { prop1: 'hello', prop2: 'yes', prop3: 'sing' };
+var obj2 = { prop1: 'goodbye', prop2: 'no', prop4: 'song' };
+var obj3 = { prop5: 'spotify' };
 
-// { prop1: 'goodbye', prop2: 'no', prop3: 'sing', prop4: 'song' }
-Stratos.extend(parent, child);
+// { prop1: 'goodbye', prop2: 'no', prop3: 'sing', prop4: 'song', prop5: 'spotify' }
+Stratos.extend(obj1, obj2, obj3);
 ```
 
 #### destroy()
@@ -102,7 +103,7 @@ bower install https://github.com/toddmotto/stratos.git
 
 ## Manual installation
 Ensure you're using the files from the `dist` directory (contains compiled production-ready code). Ensure you place the script before the closing `</body>` tag.
-	
+
 ```html
 <body>
   <!-- html above -->
@@ -118,7 +119,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release history
 
+- 1.2.0
+	- Enhanced `extend` method which recursively extends objects
 - 1.1.0
-  - Add toJSON and fromJSON for stringify/parse methods
+	- Add toJSON and fromJSON for stringify/parse methods
 - 1.0.0
   - Initial release
