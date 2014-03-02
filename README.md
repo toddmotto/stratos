@@ -115,12 +115,16 @@ Ensure you're using the files from the `dist` directory (contains compiled produ
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
+In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using Grunt.
 
 ## Release history
 
+- 1.4.0
+  - Reuse `keys` when populating values
+- 1.3.0
+  - Remove `has` inside `destroy` as `remove` call does this
 - 1.2.0
-	- Enhanced `extend` method which recursively extends objects
+  - Enhanced `extend` method which recursively extends objects
 - 1.1.0
 	- Add toJSON and fromJSON for stringify/parse methods
 - 1.0.0

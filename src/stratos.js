@@ -64,7 +64,7 @@
 
   exports.vals = function (object) {
     var vals = exports.keys(object);
-    for (var i=0,length = vals.length;i<length;i++){
+    for (var i = 0; i < vals.length; i++) {
       vals[i] = object[vals[i]];
     }
     return vals;
