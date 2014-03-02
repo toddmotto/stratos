@@ -63,11 +63,9 @@
   };
 
   exports.vals = function (object) {
-    var vals = [];
-    for (var key in object) {
-      if (exports.has(object, key)) {
-        vals.push(object[key]);
-      }
+    var vals = exports.keys(object);
+    for (var i=0,length = vals.length;i<length;i++){
+      vals[i] = object[vals[i]];
     }
     return vals;
   };
